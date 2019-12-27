@@ -7,8 +7,12 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-  oddTicks = [];
-  evenTicks = [];
+  // oddTicks = [];
+  // evenTicks = [];
+
+  //alternatives
+  oddTicks: number[] = [];
+  evenTicks: number[] = [];
 
   // onTick(TickData: { value: number }) {
   //   if (TickData.value % 2 == 0) {
@@ -19,7 +23,7 @@ export class AppComponent {
   // }
 
   onTick(value: number) {
-    if (value % 2 == 0) {
+    if (value % 2 === 0) {
       this.evenTicks.push(value);
     } else {
       this.oddTicks.push(value);
