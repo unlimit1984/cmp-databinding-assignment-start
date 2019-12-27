@@ -17,11 +17,19 @@ export class GameControlComponent {
   }
 
   onStartGame() {
-    let self = this;
+    // let self = this;
+    // if (this.refTimer === null) {
+    //   this.refTimer = setInterval(function () {
+    //     // self.tickProduced.emit({value: self.tickValue++});
+    //     self.tickProduced.emit(self.tickValue++);
+    //   }, 1000);
+    // }
+
+    //Good alternative
     if (this.refTimer === null) {
-      this.refTimer = setInterval(function () {
+      this.refTimer = setInterval(() => {
         // self.tickProduced.emit({value: self.tickValue++});
-        self.tickProduced.emit(self.tickValue++);
+        this.tickProduced.emit(this.tickValue++);
       }, 1000);
     }
   }
